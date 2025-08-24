@@ -13,15 +13,25 @@
     <meta property="og:url" content="https://www.escortsrealm.com">
     <link rel="canonical" href="https://www.escortsrealm.com">
 <style>
-  body { 
-    text-align: left; 
-    padding: 150px; 
-    font: 20px Helvetica, sans-serif; 
-    color: #333; 
-    background-color: #ffffff; /* White background */
+  html, body {
+    height: 100%;
+    margin: 0;
   }
-  h1 { font-size: 50px; }
-  article { display: block; text-align: left; width: 650px; margin: 0 auto; }
+  body { 
+    display: flex;
+    justify-content: center;   /* horizontal center */
+    align-items: center;       /* vertical center */
+    padding: 40px; 
+    font: 18px Helvetica, sans-serif; 
+    color: #333; 
+    background-color: #ffffff; 
+    text-align: left;          /* keep text left-aligned inside */
+  }
+  h1 { font-size: 2.5em; margin-top: 0; }
+  article { 
+    max-width: 650px; 
+    width: 100%;
+  }
   a { color: #dc8100; text-decoration: none; }
   a:hover { color: #333; text-decoration: none; }
 
@@ -29,29 +39,57 @@
     display: flex;
     align-items: center;
     margin-bottom: 30px;
+    flex-wrap: wrap;
   }
   .logo {
-    width: 150px;
+    width: 120px;
     height: auto;
     margin-right: 20px;
   }
   .company-details {
-    font-size: 18px;
+    font-size: 1em;
+  }
+  footer {
+    margin-top: 50px;
+    font-size: 0.8em;
+    color: #666;
+    text-align: left; /* left aligned footer */
+    line-height: 1.4;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    body { padding: 20px; font-size: 16px; }
+    h1 { font-size: 2em; }
+    .logo { width: 100px; margin-bottom: 10px; }
+    .header { flex-direction: column; align-items: flex-start; }
+  }
+  @media (max-width: 480px) {
+    body { padding: 15px; font-size: 15px; }
+    h1 { font-size: 1.8em; }
+    .logo { width: 80px; }
   }
 </style>
 </head>
 <body>
   <article>
-      <img src="logo.png" alt="Escorts Realm Logo" class="logo">
-    <div class="company-details">
-      
-    </div>
+      <div class="header">
+        <img src="logo.png" alt="Escorts Realm Logo" class="logo">
+        <div class="company-details">
+          <!-- Optional company details here -->
+        </div>
+      </div>
       <h1>We&rsquo;ll be back soon!</h1>
       <div>
           <p>Sorry for the inconvenience but we&rsquo;re performing some maintenance at the moment. If you need to, you can always <a href="mailto:support@EscortsRealm.com">contact us</a>, otherwise we&rsquo;ll be back online shortly!</p>
-          <p><strong>ESCORTS REALM</strong><br>
-      ABN 47 690 265 868</p>
+          <p>&mdash; The Escorts Realm Team</p>
       </div>
+
+      <footer>
+        Our website is part of <strong>Escorts Realm Technologies Pty Ltd</strong>, 
+        a leading innovator in the escort search and connection industry.
+        &copy; 2025 Escorts Realm, ABN 47 690 265 868
+      </footer>
   </article>
 </body>
 </html>
